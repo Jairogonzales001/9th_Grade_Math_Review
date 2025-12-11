@@ -3,496 +3,1227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9th Grade Geometry Honors - Curriculum Review</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .date-badge {
-            display: inline-block;
-            background: #667eea;
-            padding: 8px 20px;
-            border-radius: 20px;
-            margin-top: 15px;
-            font-weight: 600;
-        }
-        main {
-            padding: 40px;
-        }
-        .quarter {
-            margin-bottom: 40px;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .quarter-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .quarter-header.q2 {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        .quarter-header h2 {
-            font-size: 1.5rem;
-        }
-        .status-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        .status-badge.complete {
-            background: #27ae60;
-        }
-        .status-badge.in-progress {
-            background: #f39c12;
-        }
-        .unit {
-            border-bottom: 1px solid #e0e0e0;
-            padding: 25px;
-        }
-        .unit:last-child {
-            border-bottom: none;
-        }
-        .unit-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        .unit h3 {
-            color: #1a1a2e;
-            font-size: 1.2rem;
-        }
-        .lessons-badge {
-            background: #e8f4fd;
-            color: #2980b9;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .standards {
-            background: #f8f9fa;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-        .topics-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 10px;
-        }
-        .topics-list li {
-            background: #f8f9fa;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            font-size: 0.95rem;
-        }
-        .summary-section {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-top: 40px;
-        }
-        .summary-section h2 {
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        .skill-item {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .skill-item span {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-        .coming-up {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 30px;
-        }
-        .coming-up h3 {
-            color: #856404;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .coming-up ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .coming-up li {
-            background: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #856404;
-            border: 1px solid #ffc107;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #f8f9fa;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            main {
-                padding: 20px;
-            }
-            .quarter-header {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .topics-list {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>9th Grade Geometry Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>9th Grade Geometry Honors</h1>
-            <p>Curriculum Review - Topics Covered</p>
-            <div class="date-badge">Through December 11, 2025</div>
-        </header>
-
-        <main>
-            <!-- QUARTER 1 -->
-            <div class="quarter">
-                <div class="quarter-header">
-                    <h2>Quarter 1: Logic, Proofs & Foundations</h2>
-                    <span class="status-badge complete">COMPLETE</span>
+        <!-- Header -->
+        <div class="header">
+            <h1>9th Grade Geometry Honors Review</h1>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
                 </div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
 
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 1: Conditional Statements</h3>
-                        <span class="lessons-badge">Lessons 1-3</span>
-                    </div>
-                    <div class="standards">MA.912.LT.4.3</div>
-                    <ul class="topics-list">
-                        <li>Define "if-then" statements</li>
-                        <li>Distinguish hypothesis from conclusion</li>
-                        <li>Converse, inverse, and contrapositive</li>
-                        <li>Biconditional statements ("if and only if")</li>
-                        <li>Logical equivalence</li>
-                    </ul>
+        <!-- Topic Navigation -->
+        <div class="topic-nav">
+            <div class="topic-dot active" data-topic="1">1</div>
+            <div class="topic-dot" data-topic="2">2</div>
+            <div class="topic-dot" data-topic="3">3</div>
+            <div class="topic-dot" data-topic="4">4</div>
+            <div class="topic-dot" data-topic="5">5</div>
+            <div class="topic-dot" data-topic="6">6</div>
+            <div class="topic-dot" data-topic="7">R</div>
+        </div>
+
+        <!-- Topic 1: Logic & Conditional Statements -->
+        <div class="content-card active" id="topic1">
+            <div class="card-header">
+                <div class="card-icon logic">&#x2192;</div>
+                <div>
+                    <div class="card-title">Logic & Conditional Statements</div>
+                    <div class="card-subtitle">If-Then, Converse, Inverse, Contrapositive</div>
                 </div>
+            </div>
 
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 2: Congruence & Similarity Applications</h3>
-                        <span class="lessons-badge">Lessons 4-5</span>
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Conditional Statement</h4>
+                        <p><strong>If p, then q</strong> (p &rarr; q)</p>
+                        <ul>
+                            <li><strong>Hypothesis:</strong> The "if" part (p)</li>
+                            <li><strong>Conclusion:</strong> The "then" part (q)</li>
+                            <li>Example: If it rains, then the ground is wet</li>
+                        </ul>
                     </div>
-                    <div class="standards">MA.912.GR.1.6</div>
-                    <ul class="topics-list">
-                        <li>Demonstrate congruence from given information</li>
-                        <li>Demonstrate similarity from given information</li>
-                        <li>Find unknown measures using properties</li>
-                        <li>Multi-step congruence/similarity problems</li>
-                    </ul>
+                    <div class="reference-box">
+                        <h4>Related Statements</h4>
+                        <ul>
+                            <li><strong>Converse:</strong> If q, then p (swap)</li>
+                            <li><strong>Inverse:</strong> If not p, then not q (negate)</li>
+                            <li><strong>Contrapositive:</strong> If not q, then not p (swap & negate)</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 3: Validity & Counterexamples</h3>
-                        <span class="lessons-badge">Lessons 6-7</span>
-                    </div>
-                    <div class="standards">MA.912.LT.4.10</div>
-                    <ul class="topics-list">
-                        <li>Judge validity of mathematical arguments</li>
-                        <li>Identify flaws in reasoning</li>
-                        <li>Generate counterexamples</li>
-                        <li>Disprove false statements</li>
-                    </ul>
-                </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 4: Mathematical Proofs</h3>
-                        <span class="lessons-badge">Lessons 8-10</span>
-                    </div>
-                    <div class="standards">MA.912.LT.4.8</div>
-                    <ul class="topics-list">
-                        <li>Two-column proofs</li>
-                        <li>Paragraph proofs</li>
-                        <li>Flowchart proofs</li>
-                        <li>Direct proofs</li>
-                        <li>Proof by contradiction (indirect)</li>
-                    </ul>
-                </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 5: Lines & Angles</h3>
-                        <span class="lessons-badge">Lessons 11-13</span>
-                    </div>
-                    <div class="standards">MA.912.GR.1.1</div>
-                    <ul class="topics-list">
-                        <li>Prove vertical angles are congruent</li>
-                        <li>Perpendicular bisector theorem</li>
-                        <li>Parallel lines and transversals</li>
-                        <li>Alternate interior/exterior angles</li>
-                        <li>Corresponding angles</li>
-                        <li>Consecutive angles are supplementary</li>
-                    </ul>
-                </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 6-7: Geometric Constructions</h3>
-                        <span class="lessons-badge">Lessons 14-17</span>
-                    </div>
-                    <div class="standards">MA.912.GR.5.1, MA.912.GR.5.2</div>
-                    <ul class="topics-list">
-                        <li>Copy segments with compass/straightedge</li>
-                        <li>Copy angles with compass/straightedge</li>
-                        <li>Construct perpendicular bisectors</li>
-                        <li>Construct angle bisectors</li>
-                    </ul>
-                </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 8-9: Transformations</h3>
-                        <span class="lessons-badge">Lessons 18-21</span>
-                    </div>
-                    <div class="standards">MA.912.GR.2.1, MA.912.GR.2.2</div>
-                    <ul class="topics-list">
-                        <li>Coordinate notation for transformations</li>
-                        <li>Translations, reflections, rotations, dilations</li>
-                        <li>Rotations: 90°, 180°, 270° about origin</li>
-                        <li>Reflections: x-axis, y-axis, y = x</li>
-                        <li>Rigid vs non-rigid transformations</li>
-                        <li>Distance-preserving properties</li>
+                <div class="key-formulas">
+                    <strong>Key Facts:</strong>
+                    <ul>
+                        <li>A statement and its <strong>contrapositive</strong> are logically equivalent (both true or both false)</li>
+                        <li>The <strong>converse</strong> and <strong>inverse</strong> are logically equivalent to each other</li>
+                        <li><strong>Biconditional</strong> (p &harr; q): True when both p &rarr; q AND q &rarr; p are true</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- QUARTER 2 -->
-            <div class="quarter">
-                <div class="quarter-header q2">
-                    <h2>Quarter 2: Triangles, Congruence & Coordinate Geometry</h2>
-                    <span class="status-badge in-progress">NEARLY COMPLETE</span>
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="1-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Given: "If a triangle is equilateral, then it has three congruent sides." What is the contrapositive?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="a">
+                                <span>If a triangle has three congruent sides, then it is equilateral</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="b">
+                                <span>If a triangle is not equilateral, then it does not have three congruent sides</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="c">
+                                <span>If a triangle does not have three congruent sides, then it is not equilateral</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-1" value="d">
+                                <span>A triangle is equilateral if and only if it has three congruent sides</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-1"></div>
+                    </div>
                 </div>
 
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 11: Triangle Theorems</h3>
-                        <span class="lessons-badge">Lessons 23-25</span>
+                <div class="question-block" data-question="1-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Which statement is the INVERSE of "If x = 5, then x + 3 = 8"?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="a">
+                                <span>If x + 3 = 8, then x = 5</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="b">
+                                <span>If x &ne; 5, then x + 3 &ne; 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="c">
+                                <span>If x + 3 &ne; 8, then x &ne; 5</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-2" value="d">
+                                <span>x = 5 if and only if x + 3 = 8</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-2"></div>
                     </div>
-                    <div class="standards">MA.912.GR.1.3</div>
-                    <ul class="topics-list">
-                        <li>Interior angles sum to 180°</li>
-                        <li>Exterior angles sum to 360°</li>
-                        <li>Triangle inequality theorem</li>
-                        <li>Isosceles triangle properties</li>
-                        <li>Medians meet at centroid</li>
-                        <li>Midsegment theorem</li>
-                    </ul>
                 </div>
 
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 12: Triangle Congruence & Similarity Criteria</h3>
-                        <span class="lessons-badge">Lessons 26-28</span>
+                <div class="question-block" data-question="1-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>A conditional statement is TRUE and its converse is also TRUE. What can you conclude?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="a">
+                                <span>The inverse is false</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="b">
+                                <span>The contrapositive is false</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="c">
+                                <span>You can write a biconditional statement</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-3" value="d">
+                                <span>Nothing can be concluded</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-3"></div>
                     </div>
-                    <div class="standards">MA.912.GR.1.2</div>
-                    <ul class="topics-list">
-                        <li>SSS Congruence & Similarity</li>
-                        <li>SAS Congruence & Similarity</li>
-                        <li>ASA Congruence</li>
-                        <li>AAS Congruence</li>
-                        <li>AA Similarity</li>
-                        <li>HL (Hypotenuse-Leg) for right triangles</li>
-                    </ul>
                 </div>
 
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 13-14: Transformations & Congruence</h3>
-                        <span class="lessons-badge">Lessons 29-31</span>
+                <div class="question-block" data-question="1-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Which is a valid counterexample to disprove: "All prime numbers are odd"?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="a">
+                                <span>1</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="b">
+                                <span>2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="c">
+                                <span>9</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-4" value="d">
+                                <span>15</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-4"></div>
                     </div>
-                    <div class="standards">MA.912.GR.2.6, MA.912.GR.2.7</div>
-                    <ul class="topics-list">
-                        <li>Map figures using rigid transformations</li>
-                        <li>Prove congruence with transformation sequences</li>
-                        <li>Connect SSS, SAS, ASA, AAS to transformations</li>
-                        <li>Why AAA doesn't guarantee congruence</li>
-                    </ul>
                 </div>
 
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 15-16: Transformation Sequences</h3>
-                        <span class="lessons-badge">Lessons 32-35</span>
-                    </div>
-                    <div class="standards">MA.912.GR.2.3, MA.912.GR.2.5</div>
-                    <ul class="topics-list">
-                        <li>Map figures onto congruent/similar figures</li>
-                        <li>Lines of symmetry</li>
-                        <li>Compositions of transformations</li>
-                        <li>Graph transformed figures</li>
-                    </ul>
-                </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 17-19: Coordinate Geometry</h3>
-                        <span class="lessons-badge">Lessons 36-40</span>
-                    </div>
-                    <div class="standards">MA.912.GR.3.1, MA.912.GR.3.2, MA.912.GR.3.3</div>
-                    <ul class="topics-list">
-                        <li>Weighted averages of points</li>
-                        <li>Distance formula</li>
-                        <li>Midpoint formula</li>
-                        <li>Slope for parallel/perpendicular lines</li>
-                        <li>Classify triangles & quadrilaterals</li>
-                        <li>Centroid coordinates</li>
-                        <li>Partition segments in ratios</li>
-                    </ul>
-                </div>
-
-                <div class="unit">
-                    <div class="unit-header">
-                        <h3>Unit 20: Perimeter & Area on Coordinate Plane</h3>
-                        <span class="lessons-badge">Lessons 41-42</span>
-                    </div>
-                    <div class="standards">MA.912.GR.3.4</div>
-                    <ul class="topics-list">
-                        <li>Calculate perimeter using distance formula</li>
-                        <li>Calculate area using coordinate methods</li>
-                        <li>Real-world perimeter & area problems</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- SUMMARY -->
-            <div class="summary-section">
-                <h2>Key Skills Mastered</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <span>🧠</span>
-                        Logic & Reasoning
-                    </div>
-                    <div class="skill-item">
-                        <span>📝</span>
-                        Proof Techniques
-                    </div>
-                    <div class="skill-item">
-                        <span>📐</span>
-                        Lines & Angles
-                    </div>
-                    <div class="skill-item">
-                        <span>🔧</span>
-                        Constructions
-                    </div>
-                    <div class="skill-item">
-                        <span>🔄</span>
-                        Transformations
-                    </div>
-                    <div class="skill-item">
-                        <span>📊</span>
-                        Coordinate Geometry
-                    </div>
-                    <div class="skill-item">
-                        <span>🔺</span>
-                        Triangle Theorems
-                    </div>
-                    <div class="skill-item">
-                        <span>≅</span>
-                        Congruence Criteria
-                    </div>
-                    <div class="skill-item">
-                        <span>∼</span>
-                        Similarity Criteria
-                    </div>
-                    <div class="skill-item">
-                        <span>📏</span>
-                        Distance & Midpoint
+                <div class="question-block" data-question="1-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>If a statement is TRUE, which related statement must also be TRUE?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="a">
+                                <span>The converse</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="b">
+                                <span>The inverse</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="c">
+                                <span>The contrapositive</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1-5" value="d">
+                                <span>All of the above</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-1-5"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- COMING UP -->
-            <div class="coming-up">
-                <h3>📅 Coming Up Next (Q3-Q4)</h3>
-                <ul>
-                    <li>Similarity Transformations</li>
-                    <li>Quadrilateral Properties</li>
-                    <li>3D Geometry</li>
-                    <li>Volume & Surface Area</li>
-                    <li>Circle Theorems</li>
-                    <li>Circle Equations</li>
-                    <li>Trigonometry</li>
-                </ul>
+            <div class="nav-buttons">
+                <div></div>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
             </div>
-        </main>
+        </div>
 
-        <footer>
-            <p>9th Grade Geometry Honors | Curriculum Review | December 2025</p>
-        </footer>
+        <!-- Topic 2: Mathematical Proofs -->
+        <div class="content-card" id="topic2">
+            <div class="card-header">
+                <div class="card-icon proofs">&#x2234;</div>
+                <div>
+                    <div class="card-title">Mathematical Proofs</div>
+                    <div class="card-subtitle">Two-Column, Paragraph, and Indirect Proofs</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Proof Types</h4>
+                        <ul>
+                            <li><strong>Two-Column:</strong> Statements | Reasons</li>
+                            <li><strong>Paragraph:</strong> Written explanation with logical flow</li>
+                            <li><strong>Flowchart:</strong> Visual diagram with arrows</li>
+                            <li><strong>Indirect (Contradiction):</strong> Assume opposite, find contradiction</li>
+                        </ul>
+                    </div>
+                    <div class="reference-box">
+                        <h4>Common Reasons</h4>
+                        <ul>
+                            <li>Given</li>
+                            <li>Definition of (congruence, midpoint, etc.)</li>
+                            <li>Reflexive, Symmetric, Transitive Properties</li>
+                            <li>Substitution Property</li>
+                            <li>Vertical Angles Theorem</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Properties of Equality:</strong>
+                    <ul>
+                        <li><strong>Reflexive:</strong> a = a (anything equals itself)</li>
+                        <li><strong>Symmetric:</strong> If a = b, then b = a</li>
+                        <li><strong>Transitive:</strong> If a = b and b = c, then a = c</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="2-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>In a two-column proof, what should be written in the "Reasons" column?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="a">
+                                <span>The next step in the proof</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="b">
+                                <span>Definitions, postulates, theorems, or given information</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="c">
+                                <span>Your opinion about why the statement is true</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-1" value="d">
+                                <span>Calculations showing the answer</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>If AB = CD and CD = EF, then AB = EF. Which property justifies this?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="a">
+                                <span>Reflexive Property</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="b">
+                                <span>Symmetric Property</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="c">
+                                <span>Transitive Property</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-2" value="d">
+                                <span>Substitution Property</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>In a proof by contradiction, what is the first step?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="a">
+                                <span>State what you want to prove</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="b">
+                                <span>Assume the opposite of what you want to prove</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="c">
+                                <span>Draw a diagram</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-3" value="d">
+                                <span>List all given information</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Given: &ang;1 and &ang;2 are vertical angles. What can you conclude?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="a">
+                                <span>&ang;1 + &ang;2 = 90&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="b">
+                                <span>&ang;1 + &ang;2 = 180&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="c">
+                                <span>&ang;1 &cong; &ang;2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-4" value="d">
+                                <span>&ang;1 &perp; &ang;2</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="2-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Which property states that any segment or angle is congruent to itself?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="a">
+                                <span>Reflexive Property</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="b">
+                                <span>Symmetric Property</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="c">
+                                <span>Transitive Property</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2-5" value="d">
+                                <span>Distributive Property</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-2-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 3: Lines & Angles -->
+        <div class="content-card" id="topic3">
+            <div class="card-header">
+                <div class="card-icon lines">&#x2225;</div>
+                <div>
+                    <div class="card-title">Lines & Angles</div>
+                    <div class="card-subtitle">Parallel Lines, Transversals, and Angle Relationships</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="laws-grid">
+                    <div class="law-box">
+                        <div class="law-name">Corresponding Angles</div>
+                        <div class="law-formula">Same position, CONGRUENT</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Alternate Interior</div>
+                        <div class="law-formula">Inside, opposite sides, CONGRUENT</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Alternate Exterior</div>
+                        <div class="law-formula">Outside, opposite sides, CONGRUENT</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Consecutive Interior</div>
+                        <div class="law-formula">Inside, same side, SUPPLEMENTARY</div>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Remember:</strong> These relationships only apply when lines are PARALLEL. If the angles satisfy these relationships, you can prove lines are parallel!
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="3-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Lines m and n are parallel, cut by transversal t. If &ang;1 = 65&deg;, what is the measure of its corresponding angle?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="a">
+                                <span>25&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="b">
+                                <span>65&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="c">
+                                <span>115&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-1" value="d">
+                                <span>180&deg;</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Two parallel lines are cut by a transversal. Consecutive interior angles measure (3x + 10)&deg; and (2x + 20)&deg;. Find x.</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="a">
+                                <span>x = 30</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="b">
+                                <span>x = 34</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="c">
+                                <span>x = 36</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-2" value="d">
+                                <span>x = 40</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Which angle pair is SUPPLEMENTARY when formed by parallel lines and a transversal?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="a">
+                                <span>Corresponding angles</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="b">
+                                <span>Alternate interior angles</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="c">
+                                <span>Consecutive interior angles</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-3" value="d">
+                                <span>Alternate exterior angles</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>If two lines are cut by a transversal and alternate interior angles are congruent, what can you conclude?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="a">
+                                <span>The lines are perpendicular</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="b">
+                                <span>The lines are parallel</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="c">
+                                <span>The transversal is perpendicular to both lines</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-4" value="d">
+                                <span>Nothing can be concluded</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="3-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Point M is on the perpendicular bisector of segment AB. What must be true?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="a">
+                                <span>M is the midpoint of AB</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="b">
+                                <span>MA = MB</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="c">
+                                <span>MA + MB = AB</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3-5" value="d">
+                                <span>M is on segment AB</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-3-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 4: Transformations -->
+        <div class="content-card" id="topic4">
+            <div class="card-header">
+                <div class="card-icon transformations">&#x21BB;</div>
+                <div>
+                    <div class="card-title">Transformations</div>
+                    <div class="card-subtitle">Rigid & Non-Rigid Transformations</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="reference-grid">
+                    <div class="reference-box">
+                        <h4>Rigid Transformations (Preserve Distance)</h4>
+                        <ul>
+                            <li><strong>Translation:</strong> (x, y) &rarr; (x + a, y + b)</li>
+                            <li><strong>Reflection over x-axis:</strong> (x, y) &rarr; (x, -y)</li>
+                            <li><strong>Reflection over y-axis:</strong> (x, y) &rarr; (-x, y)</li>
+                            <li><strong>Rotation 90&deg; CCW:</strong> (x, y) &rarr; (-y, x)</li>
+                            <li><strong>Rotation 180&deg;:</strong> (x, y) &rarr; (-x, -y)</li>
+                        </ul>
+                    </div>
+                    <div class="reference-box">
+                        <h4>Non-Rigid Transformations</h4>
+                        <ul>
+                            <li><strong>Dilation:</strong> (x, y) &rarr; (kx, ky)</li>
+                            <li>k > 1: Enlargement</li>
+                            <li>0 < k < 1: Reduction</li>
+                            <li>Preserves angle measures, NOT distances</li>
+                            <li>Creates similar (not congruent) figures</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Key Fact:</strong> Rigid transformations preserve both distance AND angle measure. Figures are CONGRUENT after rigid transformations.
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="4-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Point A(3, -2) is reflected over the y-axis. What are the coordinates of A'?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="a">
+                                <span>(-3, -2)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="b">
+                                <span>(3, 2)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="c">
+                                <span>(-3, 2)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-1" value="d">
+                                <span>(2, -3)</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Point B(4, 1) is rotated 90&deg; counterclockwise about the origin. What are the coordinates of B'?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="a">
+                                <span>(-1, 4)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="b">
+                                <span>(1, -4)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="c">
+                                <span>(-4, -1)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-2" value="d">
+                                <span>(-4, 1)</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Which transformation does NOT preserve distance?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="a">
+                                <span>Reflection</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="b">
+                                <span>Rotation</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="c">
+                                <span>Translation</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-3" value="d">
+                                <span>Dilation</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Triangle ABC has vertices A(1, 2), B(4, 2), and C(1, 6). After a dilation with scale factor 2 centered at the origin, what is the length of A'B'?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="a">
+                                <span>3 units</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="b">
+                                <span>6 units</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="c">
+                                <span>9 units</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-4" value="d">
+                                <span>1.5 units</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="4-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>After a rotation of 180&deg; about the origin, point P(-2, 5) maps to P'. What are the coordinates of P'?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="a">
+                                <span>(2, 5)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="b">
+                                <span>(-2, -5)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="c">
+                                <span>(2, -5)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4-5" value="d">
+                                <span>(5, -2)</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-4-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 5: Triangle Theorems & Congruence -->
+        <div class="content-card" id="topic5">
+            <div class="card-header">
+                <div class="card-icon triangles">&#x25B3;</div>
+                <div>
+                    <div class="card-title">Triangle Theorems & Congruence</div>
+                    <div class="card-subtitle">Triangle Properties, SSS, SAS, ASA, AAS, HL</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="laws-grid">
+                    <div class="law-box">
+                        <div class="law-name">SSS</div>
+                        <div class="law-formula">3 sides &cong;</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">SAS</div>
+                        <div class="law-formula">2 sides + included angle</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">ASA</div>
+                        <div class="law-formula">2 angles + included side</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">AAS</div>
+                        <div class="law-formula">2 angles + non-included side</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">HL</div>
+                        <div class="law-formula">Right triangles: Hyp + Leg</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">AA (Similarity)</div>
+                        <div class="law-formula">2 angles &cong; &rarr; Similar</div>
+                    </div>
+                </div>
+                <div class="key-formulas">
+                    <strong>Triangle Theorems:</strong>
+                    <ul>
+                        <li>Interior angles sum to <strong>180&deg;</strong></li>
+                        <li>Exterior angle = sum of two remote interior angles</li>
+                        <li>Triangle Inequality: Any two sides sum > third side</li>
+                        <li>Base angles of isosceles triangles are congruent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="5-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>In triangle ABC, &ang;A = 45&deg; and &ang;B = 70&deg;. What is m&ang;C?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="a">
+                                <span>55&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="b">
+                                <span>65&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="c">
+                                <span>115&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-1" value="d">
+                                <span>125&deg;</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>Which set of side lengths can form a triangle?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="a">
+                                <span>3, 4, 8</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="b">
+                                <span>5, 5, 10</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="c">
+                                <span>6, 8, 10</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-2" value="d">
+                                <span>1, 2, 4</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Two triangles have two pairs of congruent angles. What can you conclude?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="a">
+                                <span>The triangles are congruent</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="b">
+                                <span>The triangles are similar</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="c">
+                                <span>The triangles are right triangles</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-3" value="d">
+                                <span>Nothing can be concluded</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>To prove two right triangles are congruent using HL, what do you need?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="a">
+                                <span>Two legs congruent</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="b">
+                                <span>Hypotenuse and one leg congruent</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="c">
+                                <span>All three sides congruent</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-4" value="d">
+                                <span>Two angles and hypotenuse congruent</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="5-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>In an isosceles triangle, the vertex angle measures 50&deg;. What is the measure of each base angle?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="a">
+                                <span>50&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="b">
+                                <span>65&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="c">
+                                <span>80&deg;</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5-5" value="d">
+                                <span>130&deg;</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-5-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="nextTopic()">
+                    Next Topic <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Topic 6: Coordinate Geometry -->
+        <div class="content-card" id="topic6">
+            <div class="card-header">
+                <div class="card-icon coordinate">&#x1F4CD;</div>
+                <div>
+                    <div class="card-title">Coordinate Geometry</div>
+                    <div class="card-subtitle">Distance, Midpoint, Slope, and Classification</div>
+                </div>
+            </div>
+
+            <div class="quick-reference">
+                <h3>Quick Reference</h3>
+                <div class="laws-grid">
+                    <div class="law-box">
+                        <div class="law-name">Distance Formula</div>
+                        <div class="law-formula">d = &radic;[(x<sub>2</sub>-x<sub>1</sub>)&sup2; + (y<sub>2</sub>-y<sub>1</sub>)&sup2;]</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Midpoint Formula</div>
+                        <div class="law-formula">M = ((x<sub>1</sub>+x<sub>2</sub>)/2, (y<sub>1</sub>+y<sub>2</sub>)/2)</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Slope Formula</div>
+                        <div class="law-formula">m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>)</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Parallel Lines</div>
+                        <div class="law-formula">Same slope: m<sub>1</sub> = m<sub>2</sub></div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Perpendicular Lines</div>
+                        <div class="law-formula">m<sub>1</sub> &middot; m<sub>2</sub> = -1</div>
+                    </div>
+                    <div class="law-box">
+                        <div class="law-name">Slopes</div>
+                        <div class="law-formula">Negative reciprocals</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h3>Practice Questions</h3>
+
+                <div class="question-block" data-question="6-1">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <p>Find the distance between points A(1, 2) and B(4, 6).</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6-1" value="a">
+                                <span>5</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-1" value="b">
+                                <span>7</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-1" value="c">
+                                <span>25</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-1" value="d">
+                                <span>&radic;7</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-6-1"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="6-2">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <p>What is the midpoint of the segment with endpoints (-2, 5) and (6, -1)?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6-2" value="a">
+                                <span>(4, 4)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-2" value="b">
+                                <span>(2, 2)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-2" value="c">
+                                <span>(2, 3)</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-2" value="d">
+                                <span>(4, 2)</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-6-2"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="6-3">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <p>Line AB has slope 2/3. What is the slope of a line perpendicular to AB?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6-3" value="a">
+                                <span>2/3</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-3" value="b">
+                                <span>-2/3</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-3" value="c">
+                                <span>3/2</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-3" value="d">
+                                <span>-3/2</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-6-3"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="6-4">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <p>Triangle PQR has vertices P(0, 0), Q(4, 0), and R(2, 3). What type of triangle is it?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6-4" value="a">
+                                <span>Scalene</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-4" value="b">
+                                <span>Isosceles</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-4" value="c">
+                                <span>Equilateral</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-4" value="d">
+                                <span>Right</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-6-4"></div>
+                    </div>
+                </div>
+
+                <div class="question-block" data-question="6-5">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <p>Two lines have slopes of 4 and -1/4. What is the relationship between these lines?</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q6-5" value="a">
+                                <span>Parallel</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-5" value="b">
+                                <span>Perpendicular</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-5" value="c">
+                                <span>Neither parallel nor perpendicular</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q6-5" value="d">
+                                <span>The same line</span>
+                            </label>
+                        </div>
+                        <div class="feedback" id="feedback-6-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Back
+                </button>
+                <button class="nav-btn next" onclick="submitQuiz()">
+                    Submit Review <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Page -->
+        <div class="content-card" id="topic7">
+            <div class="card-header">
+                <div class="card-icon results">&#x2713;</div>
+                <div>
+                    <div class="card-title">Review Results</div>
+                    <div class="card-subtitle">See how you did!</div>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="overall-score">
+                    <div class="score-circle">
+                        <span class="score-number" id="totalScore">0</span>
+                        <span class="score-total">/30</span>
+                    </div>
+                    <div class="score-percent" id="scorePercent">0%</div>
+                </div>
+
+                <div class="topic-scores">
+                    <h3>Score by Topic</h3>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Logic & Conditionals</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic1"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic1">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Mathematical Proofs</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic2"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic2">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Lines & Angles</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic3"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic3">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Transformations</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic4"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic4">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Triangles & Congruence</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic5"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic5">0/5</span>
+                    </div>
+                    <div class="topic-score-item">
+                        <span class="topic-name">Coordinate Geometry</span>
+                        <div class="topic-bar-container">
+                            <div class="topic-bar" id="bar-topic6"></div>
+                        </div>
+                        <span class="topic-score-text" id="score-topic6">0/5</span>
+                    </div>
+                </div>
+
+                <div class="recommendations" id="recommendations">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="action-btn retry" onclick="retryQuiz()">Try Again</button>
+                    <button class="action-btn print" onclick="window.print()">Print Results</button>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn prev" onclick="prevTopic()">
+                    <span>&larr;</span> Review Answers
+                </button>
+                <div></div>
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
