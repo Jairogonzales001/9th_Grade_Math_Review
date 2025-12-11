@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9th Grade Geometry Honors - Curriculum Review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .date-badge {
+            display: inline-block;
+            background: #667eea;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        main {
+            padding: 40px;
+        }
+        .quarter {
+            margin-bottom: 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .quarter-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .quarter-header.q2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .quarter-header h2 {
+            font-size: 1.5rem;
+        }
+        .status-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .status-badge.complete {
+            background: #27ae60;
+        }
+        .status-badge.in-progress {
+            background: #f39c12;
+        }
+        .unit {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 25px;
+        }
+        .unit:last-child {
+            border-bottom: none;
+        }
+        .unit-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .unit h3 {
+            color: #1a1a2e;
+            font-size: 1.2rem;
+        }
+        .lessons-badge {
+            background: #e8f4fd;
+            color: #2980b9;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .standards {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .topics-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+        }
+        .topics-list li {
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            font-size: 0.95rem;
+        }
+        .summary-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        .summary-section h2 {
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .skill-item span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .coming-up {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        .coming-up h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .coming-up ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .coming-up li {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #856404;
+            border: 1px solid #ffc107;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            main {
+                padding: 20px;
+            }
+            .quarter-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .topics-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>9th Grade Geometry Honors</h1>
+            <p>Curriculum Review - Topics Covered</p>
+            <div class="date-badge">Through December 11, 2025</div>
+        </header>
+
+        <main>
+            <!-- QUARTER 1 -->
+            <div class="quarter">
+                <div class="quarter-header">
+                    <h2>Quarter 1: Logic, Proofs & Foundations</h2>
+                    <span class="status-badge complete">COMPLETE</span>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 1: Conditional Statements</h3>
+                        <span class="lessons-badge">Lessons 1-3</span>
+                    </div>
+                    <div class="standards">MA.912.LT.4.3</div>
+                    <ul class="topics-list">
+                        <li>Define "if-then" statements</li>
+                        <li>Distinguish hypothesis from conclusion</li>
+                        <li>Converse, inverse, and contrapositive</li>
+                        <li>Biconditional statements ("if and only if")</li>
+                        <li>Logical equivalence</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 2: Congruence & Similarity Applications</h3>
+                        <span class="lessons-badge">Lessons 4-5</span>
+                    </div>
+                    <div class="standards">MA.912.GR.1.6</div>
+                    <ul class="topics-list">
+                        <li>Demonstrate congruence from given information</li>
+                        <li>Demonstrate similarity from given information</li>
+                        <li>Find unknown measures using properties</li>
+                        <li>Multi-step congruence/similarity problems</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 3: Validity & Counterexamples</h3>
+                        <span class="lessons-badge">Lessons 6-7</span>
+                    </div>
+                    <div class="standards">MA.912.LT.4.10</div>
+                    <ul class="topics-list">
+                        <li>Judge validity of mathematical arguments</li>
+                        <li>Identify flaws in reasoning</li>
+                        <li>Generate counterexamples</li>
+                        <li>Disprove false statements</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 4: Mathematical Proofs</h3>
+                        <span class="lessons-badge">Lessons 8-10</span>
+                    </div>
+                    <div class="standards">MA.912.LT.4.8</div>
+                    <ul class="topics-list">
+                        <li>Two-column proofs</li>
+                        <li>Paragraph proofs</li>
+                        <li>Flowchart proofs</li>
+                        <li>Direct proofs</li>
+                        <li>Proof by contradiction (indirect)</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 5: Lines & Angles</h3>
+                        <span class="lessons-badge">Lessons 11-13</span>
+                    </div>
+                    <div class="standards">MA.912.GR.1.1</div>
+                    <ul class="topics-list">
+                        <li>Prove vertical angles are congruent</li>
+                        <li>Perpendicular bisector theorem</li>
+                        <li>Parallel lines and transversals</li>
+                        <li>Alternate interior/exterior angles</li>
+                        <li>Corresponding angles</li>
+                        <li>Consecutive angles are supplementary</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 6-7: Geometric Constructions</h3>
+                        <span class="lessons-badge">Lessons 14-17</span>
+                    </div>
+                    <div class="standards">MA.912.GR.5.1, MA.912.GR.5.2</div>
+                    <ul class="topics-list">
+                        <li>Copy segments with compass/straightedge</li>
+                        <li>Copy angles with compass/straightedge</li>
+                        <li>Construct perpendicular bisectors</li>
+                        <li>Construct angle bisectors</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 8-9: Transformations</h3>
+                        <span class="lessons-badge">Lessons 18-21</span>
+                    </div>
+                    <div class="standards">MA.912.GR.2.1, MA.912.GR.2.2</div>
+                    <ul class="topics-list">
+                        <li>Coordinate notation for transformations</li>
+                        <li>Translations, reflections, rotations, dilations</li>
+                        <li>Rotations: 90°, 180°, 270° about origin</li>
+                        <li>Reflections: x-axis, y-axis, y = x</li>
+                        <li>Rigid vs non-rigid transformations</li>
+                        <li>Distance-preserving properties</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- QUARTER 2 -->
+            <div class="quarter">
+                <div class="quarter-header q2">
+                    <h2>Quarter 2: Triangles, Congruence & Coordinate Geometry</h2>
+                    <span class="status-badge in-progress">NEARLY COMPLETE</span>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 11: Triangle Theorems</h3>
+                        <span class="lessons-badge">Lessons 23-25</span>
+                    </div>
+                    <div class="standards">MA.912.GR.1.3</div>
+                    <ul class="topics-list">
+                        <li>Interior angles sum to 180°</li>
+                        <li>Exterior angles sum to 360°</li>
+                        <li>Triangle inequality theorem</li>
+                        <li>Isosceles triangle properties</li>
+                        <li>Medians meet at centroid</li>
+                        <li>Midsegment theorem</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 12: Triangle Congruence & Similarity Criteria</h3>
+                        <span class="lessons-badge">Lessons 26-28</span>
+                    </div>
+                    <div class="standards">MA.912.GR.1.2</div>
+                    <ul class="topics-list">
+                        <li>SSS Congruence & Similarity</li>
+                        <li>SAS Congruence & Similarity</li>
+                        <li>ASA Congruence</li>
+                        <li>AAS Congruence</li>
+                        <li>AA Similarity</li>
+                        <li>HL (Hypotenuse-Leg) for right triangles</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 13-14: Transformations & Congruence</h3>
+                        <span class="lessons-badge">Lessons 29-31</span>
+                    </div>
+                    <div class="standards">MA.912.GR.2.6, MA.912.GR.2.7</div>
+                    <ul class="topics-list">
+                        <li>Map figures using rigid transformations</li>
+                        <li>Prove congruence with transformation sequences</li>
+                        <li>Connect SSS, SAS, ASA, AAS to transformations</li>
+                        <li>Why AAA doesn't guarantee congruence</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 15-16: Transformation Sequences</h3>
+                        <span class="lessons-badge">Lessons 32-35</span>
+                    </div>
+                    <div class="standards">MA.912.GR.2.3, MA.912.GR.2.5</div>
+                    <ul class="topics-list">
+                        <li>Map figures onto congruent/similar figures</li>
+                        <li>Lines of symmetry</li>
+                        <li>Compositions of transformations</li>
+                        <li>Graph transformed figures</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 17-19: Coordinate Geometry</h3>
+                        <span class="lessons-badge">Lessons 36-40</span>
+                    </div>
+                    <div class="standards">MA.912.GR.3.1, MA.912.GR.3.2, MA.912.GR.3.3</div>
+                    <ul class="topics-list">
+                        <li>Weighted averages of points</li>
+                        <li>Distance formula</li>
+                        <li>Midpoint formula</li>
+                        <li>Slope for parallel/perpendicular lines</li>
+                        <li>Classify triangles & quadrilaterals</li>
+                        <li>Centroid coordinates</li>
+                        <li>Partition segments in ratios</li>
+                    </ul>
+                </div>
+
+                <div class="unit">
+                    <div class="unit-header">
+                        <h3>Unit 20: Perimeter & Area on Coordinate Plane</h3>
+                        <span class="lessons-badge">Lessons 41-42</span>
+                    </div>
+                    <div class="standards">MA.912.GR.3.4</div>
+                    <ul class="topics-list">
+                        <li>Calculate perimeter using distance formula</li>
+                        <li>Calculate area using coordinate methods</li>
+                        <li>Real-world perimeter & area problems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SUMMARY -->
+            <div class="summary-section">
+                <h2>Key Skills Mastered</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span>🧠</span>
+                        Logic & Reasoning
+                    </div>
+                    <div class="skill-item">
+                        <span>📝</span>
+                        Proof Techniques
+                    </div>
+                    <div class="skill-item">
+                        <span>📐</span>
+                        Lines & Angles
+                    </div>
+                    <div class="skill-item">
+                        <span>🔧</span>
+                        Constructions
+                    </div>
+                    <div class="skill-item">
+                        <span>🔄</span>
+                        Transformations
+                    </div>
+                    <div class="skill-item">
+                        <span>📊</span>
+                        Coordinate Geometry
+                    </div>
+                    <div class="skill-item">
+                        <span>🔺</span>
+                        Triangle Theorems
+                    </div>
+                    <div class="skill-item">
+                        <span>≅</span>
+                        Congruence Criteria
+                    </div>
+                    <div class="skill-item">
+                        <span>∼</span>
+                        Similarity Criteria
+                    </div>
+                    <div class="skill-item">
+                        <span>📏</span>
+                        Distance & Midpoint
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMING UP -->
+            <div class="coming-up">
+                <h3>📅 Coming Up Next (Q3-Q4)</h3>
+                <ul>
+                    <li>Similarity Transformations</li>
+                    <li>Quadrilateral Properties</li>
+                    <li>3D Geometry</li>
+                    <li>Volume & Surface Area</li>
+                    <li>Circle Theorems</li>
+                    <li>Circle Equations</li>
+                    <li>Trigonometry</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>9th Grade Geometry Honors | Curriculum Review | December 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
